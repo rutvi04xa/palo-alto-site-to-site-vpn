@@ -80,3 +80,10 @@ Rather than just configuring and assuming it worked, each policy was tested with
 ![Branch guest internet only](screenshots/13-branch-guest-internet-only.png)
  
 This confirmed the tunnel wasn't just "up" — the security policy was actually shaping traffic the way the design called for.
+
+## Key Takeaways
+ 
+- Practiced subnetting a single address block into functionally isolated zones using VLSM, rather than treating each zone as a flat, oversized network.
+- Learned the practical difference between IKE Phase 1 (authentication/key exchange) and Phase 2 (IPSec SA/tunnel data path) when troubleshooting a tunnel that won't come up.
+- Reinforced that a working tunnel is not the same as a secure design — zone-based policy is what actually enforces the segmentation requirements.
+- If extending this project: add logging/alerting on the security policies (e.g., forwarding to a SIEM) to turn this from a working network into something a SOC could actually monitor.
